@@ -40,7 +40,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = []
 
-PROJECT_APPS = []
+PROJECT_APPS = ["users.apps.UsersConfig"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
@@ -117,3 +117,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
+
+AUTH_USER_MODEL = "users.User"
