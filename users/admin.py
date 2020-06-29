@@ -6,5 +6,8 @@ from . import models
 @admin.register(models.User)
 class UserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
-        ("Custom Info", {"fields": ("avatar", "gender", "language", "bio"),}),
+        (
+            "Custom Info",
+            {"fields": ("avatar", "gender", "language", "bio", "birthday"),},
+        ),
     )

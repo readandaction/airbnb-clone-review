@@ -30,6 +30,7 @@ class User(AbstractUser):
     )
     avatar = models.ImageField(blank=True)
     bio = models.TextField(blank=True)
+    birthday = models.DateField(null=True)
     gender = models.CharField(blank=True, max_length=40, choices=GENDER_CHOICES)
     language = models.CharField(max_length=10, choices=LANGUAGE_CHOICES, blank=True)
     currency = models.CharField(max_length=10, choices=CURRENCY_CHOICES, blank=True)
